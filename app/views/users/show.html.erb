@@ -2,3 +2,21 @@
   <%= gravatar_for @user %>
   <%= @user.name %>
 </h1>
+
+<h2>
+  名前：<%= @user.name %>
+  <%= link_to "編集", edit_user_path(@user) %></br>
+  E-mail : <%= @user.email %>
+  <%= link_to "編集", edit_user_path(@user) %></br>
+  住まい : <%= @user.city %>
+  <%= link_to "編集", edit_user_path(@user) %></br>
+  年齢 : <%= @user.age %>
+  <%= link_to "編集", edit_user_path(@user) %></br>
+  職業 : <%= @user.job %>
+  <%= link_to "編集", edit_user_path(@user) %></br>
+  一言 : <%= @user.profilecomment %>
+  <%= link_to "編集", edit_user_path(@user) %></br>
+      
+  
+</br><%= link_to "Homeに戻る", user_path %>
+  

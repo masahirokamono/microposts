@@ -1,0 +1,2 @@
+class UserprofileController < ApplicationController
+end

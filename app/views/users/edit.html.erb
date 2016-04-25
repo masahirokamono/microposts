@@ -1,0 +1,41 @@
+<h1>プロフィール変更
+  <%= gravatar_for @user %>
+  <%= @user.name %>
+</h1>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@user) do |f| %>
+      <%= render 'shared/error_messages', object: f.object %>
+
+<%= f.label :name %>
+<%= f.text_field :name %>
+
+<%= f.label :email %>
+<%= f.text_field :email %>
+
+<%= f.label :city %>
+<%= f.text_field :city %>
+
+<%= f.label :age %>
+<%= f.text_field :age %>
+
+<%= f.label :job %>
+<%= f.text_field :job %>
+
+<%= f.label :profilecomment %>
+<%= f.text_field :profilecomment %>
+
+<%= f.label :password %>
+<%= f.text_field :password %>
+
+<%= f.label :password_confirmation, "Confirmation" %>
+<%= f.password_field :password_confirmation %>
+
+<%= f.submit "編集終了", class: "btn btn-large btn-primary" %>
+
+
+      <% end %>
+  </div>
+</div>
+<%= link_to "Homeに戻る", user_path %>
