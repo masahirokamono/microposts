@@ -4,19 +4,14 @@
 </h1>
 
 <h2>
-  名前：<%= @user.name %>
-  <%= link_to "編集", edit_user_path(@user) %></br>
-  E-mail : <%= @user.email %>
-  <%= link_to "編集", edit_user_path(@user) %></br>
-  住まい : <%= @user.city %>
-  <%= link_to "編集", edit_user_path(@user) %></br>
-  年齢 : <%= @user.age %>
-  <%= link_to "編集", edit_user_path(@user) %></br>
-  職業 : <%= @user.job %>
-  <%= link_to "編集", edit_user_path(@user) %></br>
-  一言 : <%= @user.profilecomment %>
-  <%= link_to "編集", edit_user_path(@user) %></br>
-      
+  名前：<%= @user.name %></br>
+  E-mail : <%= @user.email %></br>
+  住まい : <%= @user.city %></br>
+  年齢 : <%= @user.age %></br>
+  職業 : <%= @user.job %></br>
+  一言 : <%= @user.profilecomment %></br>
+  
+
+</br><%= link_to "profile編集", edit_user_path %>
   
 </br><%= link_to "Homeに戻る", user_path %>
-  

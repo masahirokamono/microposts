@@ -1,7 +1,8 @@
-<h1>プロフィール変更
+<h1>プロフィール変更</h1>
+<h2>
   <%= gravatar_for @user %>
   <%= @user.name %>
-</h1>
+</h2>
 
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
@@ -27,7 +28,7 @@
 <%= f.text_field :profilecomment %>
 
 <%= f.label :password %>
-<%= f.text_field :password %>
+<%= f.password_field :password %>
 
 <%= f.label :password_confirmation, "Confirmation" %>
 <%= f.password_field :password_confirmation %>
