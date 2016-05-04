@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'static_pages/home'
+
   get 'sessions/new'
 
   root to: 'static_pages#home'
