@@ -5,9 +5,9 @@ class User < ActiveRecord::Base
     validates :email, presence: true, length: { maximum: 255 },
                       format: { with: VALID_EMAIL_REGEX },
                       uniqueness: { case_sensitive: false }
-    validates :city, presence: true, length: { maximum: 20 }
-    validates :age , numericality: {only_integer: true, greater_than_or_equal_to: 0} , presence: true
-    validates :job, presence: true, length: { maximum: 20 }
-    validates :profilecomment, presence: true, length: { maximum: 40 }
+    validates :city, allow_blank: true, length: { maximum: 20 }
+    validates :age , numericality: {only_integer: true, greater_than_or_equal_to: 0} , allow_blank: true
+    validates :job, allow_blank: true, length: { maximum: 20 }
+    validates :profilecomment, allow_blank: true, length: { maximum: 40 }
     has_secure_password
 end

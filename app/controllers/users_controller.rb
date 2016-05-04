@@ -14,7 +14,6 @@ class UsersController < ApplicationController
     @user = User.all
   end
 
-
   def create
     @user = User.new(user_params)
     if @user.save
@@ -38,11 +37,6 @@ class UsersController < ApplicationController
       render 'edit'
     end
   end
-  
-  def correct_user
-    @user = User.find(params[:id])
-    redirect_to root_url if @user != current_user
-  end        
 
   private
 
@@ -50,4 +44,9 @@ class UsersController < ApplicationController
     params.require(:user).permit(:name, :email, :password, :city, :age, :job, :profilecomment,
                                  :password_confirmation)
   end
+  def correct_user
+    @user = User.find(params[:id])
+    redirect_to root_url if @user != current_user
+  end  
+  
 end
