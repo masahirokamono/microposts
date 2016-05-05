@@ -13,15 +13,16 @@
       <h3>Microposts (<%= @user.microposts.count %>)</h3>
       <ol class="microposts">
         <%= render @microposts %>
+          名前：<%= @user.name %></br>
+          E-mail : <%= @user.email %></br>
+          住まい : <%= @user.city %></br>
+          年齢 : <%= @user.age %></br>
+          職業 : <%= @user.job %></br>
+          一言 : <%= @user.profilecomment %></br>
       </ol>
+      
     <% end %>
-    <h2>
-  名前：<%= @user.name %></br>
-  E-mail : <%= @user.email %></br>
-  住まい : <%= @user.city %></br>
-  年齢 : <%= @user.age %></br>
-  職業 : <%= @user.job %></br>
-  一言 : <%= @user.profilecomment %></br>
+
 
 
 <% if current_user == @user %>
