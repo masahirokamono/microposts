@@ -1,4 +1,5 @@
 <h1>Sign up</h1>
+<h2>create your account and try new application</h2>
 
 <div class="row">
   <div class="col-md-6 col-md-offset-3">
@@ -6,16 +7,16 @@
       <%= render 'shared/error_messages', object: f.object %>
 
       <%= f.label :name %>
-      <%= f.text_field :name %>
+      <%= f.text_field :name, placeholder:"Enter your name" %>
 
       <%= f.label :email %>
-      <%= f.text_field :email %>
+      <%= f.text_field :email, placeholder:"Enter your e-mail" %>
 
       <%= f.label :password %>
-      <%= f.password_field :password %>
+      <%= f.password_field :password, placeholder:"Enter new Password" %>
 
       <%= f.label :password_confirmation, "Confirmation" %>
-      <%= f.password_field :password_confirmation %>
+      <%= f.password_field :password_confirmation, placeholder:"Try to enter password again" %>
 
       <%= f.submit "Create my account", class: "btn btn-large btn-primary" %>
     <% end %>
