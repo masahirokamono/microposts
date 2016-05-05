@@ -12,7 +12,7 @@
   一言 : <%= @user.profilecomment %></br>
 
 
-
-<%= link_to "編集する", edit_user_path %></br>
-
-<%= link_to "Homeへ戻る", user_path %>
+<% if current_user == @user %>
+  <%= link_to "編集する", edit_user_path(@user) %><br>
+<% end %>
+<%= link_to "Homeへ戻る", root_path %>
