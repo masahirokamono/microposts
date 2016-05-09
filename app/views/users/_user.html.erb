@@ -1,4 +1,4 @@
-<li id="user-<%= @user.following %>">
+<section id="user-<%= @user.following %>">
   <%= link_to gravatar_for(user, size: 50) %>
-  <span class="user"><%= link_to user.name %></span>
-</li>
+  <span class="user"><%= link_to user.name, user %></span>
+</section>
