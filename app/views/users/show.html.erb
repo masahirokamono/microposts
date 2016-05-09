@@ -1,12 +1,4 @@
 <div class="row">
-  <aside class="col-md-4">
-    <section class="user_info">
-      <h1>
-        <%= gravatar_for @user %>
-        <%= @user.name %>
-      </h1>
-    </section>
-  </aside>
   <div class="col-md-8">
     <%= render 'follow_form' if logged_in? %>
     <% if @user.microposts.any? %>
@@ -14,19 +6,26 @@
       <ol class="microposts">
         <%= render @microposts %>
       </ol>
+      <%= will_paginate @microposts %>
     <% end %>
-    <h2>
-  名前：<%= @user.name %></br>
-  E-mail : <%= @user.email %></br>
-  住まい : <%= @user.city %></br>
-  年齢 : <%= @user.age %></br>
-  職業 : <%= @user.job %></br>
-  一言 : <%= @user.profilecomment %></br>
-
-
-<% if current_user == @user %>
-  <%= link_to "編集する", edit_user_path(@user) %><br>
-<% end %>
-<%= link_to "Homeへ戻る", root_path %>
   </div>
+
+<aside class="col-md-4">
+    <section class="user_info">
+      <h1>
+        <%= gravatar_for @user %>
+        <%= @user.name %>
+    </section>
+      </h1>
+          <li>名前：<%= @user.name %></li> 
+          <li>E-mail : <%= @user.email %></li> 
+          <li>住まい : <%= @user.city %></li> 
+          <li>年齢 : <%= @user.age %></li> 
+          <li>職業 : <%= @user.job %></li> 
+          <li>一言 : <%= @user.profilecomment %></li> 
+    <% if current_user == @user %>
+      <%= link_to "編集する", edit_user_path(@user) %><br>
+    <% end %>
+    <%= link_to "Homeへ戻る", root_path %>
+ </aside>
 </div>
