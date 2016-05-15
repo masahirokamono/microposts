@@ -7,6 +7,10 @@ body {
   padding-top: 60px;
 }
 
+span {
+  padding-left: 60px;
+}
+
 section {
   overflow: auto;
 }
@@ -92,11 +96,25 @@ input {
 }
 #error_explanation {
   color: red;
-  ul {
-    color: red;
-    margin: 0 0 30px 0;
-  }
 }
+
+ul {
+  margin: 100 100 100px 100;
+  padding: 10px;
+  list-style: none;
+  }
+
+li.userfollowing2 {
+  height: 100px;
+  border-top: 1px solid #e8e8e8;
+  } 
+
+.gravatar {
+  float: left;
+  margin-right: 10px;
+  margin-top: 5px;
+  }
+
 
 .field_with_errors {
   @extend .has-error;
@@ -122,6 +140,7 @@ aside {
       display: block;
       margin-bottom: 3px;
       line-height: 1;
+    
     }
     h1 {
       font-size: 1.4em;
@@ -146,7 +165,8 @@ aside {
   overflow: auto;
   margin-top: 0;
   padding: 0;
-  a {
+  
+a {
     float: left;
     padding: 0 10px;
     border-left: 1px solid $gray-lighter;
@@ -160,13 +180,14 @@ aside {
       color: blue;
     }
   }
-  strong {
+
+strong {
     display: block;
   }
 }
 
 .user_avatars {
-  overflow: auto;
+  overflow: hidden;
   margin-top: 10px;
   .gravatar {
     margin: 1px 1px;
@@ -180,10 +201,6 @@ aside {
   padding: 0;
 }
 
-
-
-
-/* microposts */
 
 .microposts {
   list-style: none;

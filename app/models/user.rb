@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
                       format: { with: VALID_EMAIL_REGEX },
                       uniqueness: { case_sensitive: false }
     validates :city, allow_blank: true, length: { maximum: 20 }
-    validates :age , numericality: {only_integer: true, greater_than_or_equal_to: 0} , allow_blank: true
+    validates :age , numericality: {only_integer: true, greater_than_or_equal_to: 0 } , allow_blank: true, length: { maximum: 4 }
     validates :job, allow_blank: true, length: { maximum: 20 }
     validates :profilecomment, allow_blank: true, length: { maximum: 40 }
    
